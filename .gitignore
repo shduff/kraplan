@@ -1,0 +1,16 @@
+# Ignore backup files
+*~
+\#*\#
+
+# Ignore compiled python files
+*.pyc
+
+# Ignore log files
+*.log
+
+# Ignore subversion, git, bzr, and cvs repositories
+*.svn/*
+*.git/*
+*.bzr/*
+*.cvs/*
+
