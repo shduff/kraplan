@@ -1,0 +1,289 @@
+# THE INFORMATION ON LINES BEGINNING WITH A '#' ARE TECHNICAL NOTES.
+# YOU DON'T NEED TO READ THEM UNLESS YOU'RE INTERESTED IN HOW ORG-MODE
+# WORKS AT SPROUT
+
+# This file is cabbage_todo.org of the cabbage project.  It is
+# maintained by aresnick of http://alecresnick.org.  Any questions or concerns
+# about this file should be directed to alec@sproutward.org.  Take a look
+# at the [[fileDescription]] before doing so.
+
+# Lines beginning with "#+" are
+# [[glossary:org-modedirectives][org-mode directives]] which let us
+# customize the way [[glossary:emacs][emacs]]
+# [[glossary:org-mode][org-mode]] behaves. You don't need to pay
+# attention to them.  The todos you're probably looking for are
+# [[fileStart][down a ways]], below the line of "-"'s (dashes).  If
+# you're interested in how org-mode is customized, please read on and
+# take a look at [[glossary:org-mode][sprout's org-mode setup]].
+#
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# These options set [[glossary:metadata][metadata]] for org-mode, and
+# will be used if/when the file gets [[glossary:render][rendered]]
+# into another format (like HTML).
+#
+#+TITLE: cabbage tasks
+#+AUTHOR: maintained by aresnick of http://alecresnick.org 
+#+EMAIL: alec@sproutward.org
+#+DATE: Last modified 02.07.09
+#+LANGUAGE: en
+#
+#
+# ---
+#
+#
+# The CATEGORY and FILETAGS variables define the CATEGORY and default
+# TAGS for the file.  The CATEGORY is used in the
+# [[glossary:org-agenda][agenda]] and the tags let you
+# [[glossary:tag][tag]] headlines.
+# 
+#+CATEGORY: cabbage 
+#+FILETAGS: sprout cabbage_todo.org cabbage
+#
+#
+# ---
+#
+#
+# LINK options are used to [[glossary:abbreviated org-mode
+# links][abbreviate org-mode links]] for easy linking within a
+# document.  The "%s" string tells a link to substitute whatever
+# [[glossary:tag][tag]] we choose in place of %s, letting us do things
+# like [[glossary:glossary][link terms in our glossary]].
+#
+#+LINK: glossary http://glossary.sproutward.org/%s
+#
+#
+# ---
+#
+#
+# The STARTUP options control how org-mode looks and act by setting
+# preferences at startup.  We are using the following preferences:
+#
+# - "showall" starts org-mode with all the headlines
+# [[glossary:org-mode visibility cycling][expanded].
+# - "logdone" sets org-mode to record the time and date when a TODO is
+# completed.
+# - "lognotedone" sets org-mode to ask for a [[glossary:org-mode notes][note]] when a TODO is
+# done.
+# - "logrepeat" sets org-mode to record when a TODO which
+# [[glossary:org-mode repeating tasks][repeats]] is completed.
+# - "lognoteclock-out" sets org-mode to ask for a [[glossary:org-mode notes][note]] when you
+# [[glossary:time tracking][clock out]] of a task.
+# - "hidestars" hides all but the last star in a headline, to
+# [[][enhance readability]].
+# - "odd" sets org-mode to only use odd numbers of stars in headlines,
+# to [[][enhance readability].
+#
+#+STARTUP: showall logdone lognotedone logrepeat lognoteclock-out hidestars odd 
+#
+#
+# ---
+#
+#
+# At sprout, we try to keep track of how much time we expect things to
+# take, and then how much they actually do.  These configuration lines
+# let us set up a way to attach a [[glossary:org-mode
+# property]["property]] to a TODO where we can set our time estimate,
+# and then record how long the task actually took by
+# [[glossary:time-tracking][clocking in and out]].  The "Effort_ALL"
+# PROPERTY sets the available time increments.  The "COLUMNS" property
+# defines columns for [[glossary:emacs column-mode][column-mode]].  In
+# this case, those columns are the task, the estimated time, and the
+# total time clocked (CLOCKSUM).  The "%#" parts of the line indicate
+# how many characters wide each column should be (%70 = 70 characters
+# wide, for instance.)
+#
+#+PROPERTY: Effort_ALL 0:00 0:05 0:15 0:30 0:45 1:00 1:15 1:30 1:45 2:00 2:15 2:30 2:45 3:00 3:15 3:30 3:45 4:00 4:15 4:30 4:45 5:00 5:15 5:30 5:45 6:00
+#+COLUMNS: %70ITEM(Task) %10Effort(Estimated Effort){:} %CLOCKSUM
+#
+# ~~~
+# ------------------------------------------------------------
+#
+#+BEGIN_COMMENT
+# <<fileDescription>>
+This todo.org file is for recording tasks associated with the
+${projectname} project.  Take a look at the [[][sprout doshit
+guidelines]] for the details and the [[][sprout doshit tutorial]] for
+more information on doing shit with doshit.
+
+A quick summary of the guidelines:
+ - No scheduled task should be expected to take more than six hours.
+   If you don't know how long a task will take, create a TODO for
+   figuring that out.
+ - No scheduled task should be unassigned.  If you don't know who will
+   do it, create a task for figuring that out and make someone
+   responsible for following up.
+ - No task should go without a deadline if it can be avoided.  If it
+   is not clear when the deadline should be, do not set it
+   arbitrarily.  Create another TODO for assessing how long the given
+   task(s) will take and set a deadline on that.
+ - Each TODO should be assigned to exactly one person.  If you want
+   several people to do a task, copy and paste that task and tag each
+   instance with their name.
+ - Estimate how long a task will take, and be sure to track the time
+   you spend on it, commenting as to what progress you made each time
+   you clock in and out.  See [[][time tracking in doshit at sprout]]
+ - The only person setting the priority of a task should be the person
+   who is doing it.
+
+If you're having any issues with doshit, drop [[mailto:doshit@sproutward.org][doshit@sproutward.org]] a
+line, or drop by [[irc:/sprout/irc.freenode.net][#sprout]] on IRC.
+#+END_COMMENT
+
+
+# File starts below the line of "#"s.  Refer to [[glossary:org-mode
+# customization][the doshit documentation]] for information about how
+# to edit the options above.
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# <<fileStart>>
+
+
+# Start recording TODOs after this line
+# ------------------------------------------------------------
+#
+
+# THE INFORMATION ON LINES BEGINNING WITH A '#' ARE TECHNICAL NOTES.
+# YOU DON'T NEED TO READ THEM UNLESS YOU'RE INTERESTED IN HOW ORG-MODE
+# WORKS AT SPROUT
+
+# This file is cabbage_todo.org of the cabbage project.  It is
+# maintained by aresnick of http://alecresnick.org.  Any questions or concerns
+# about this file should be directed to alec@sproutward.org.  Take a look
+# at the [[fileDescription]] before doing so.
+
+# Lines beginning with "#+" are
+# [[glossary:org-modedirectives][org-mode directives]] which let us
+# customize the way [[glossary:emacs][emacs]]
+# [[glossary:org-mode][org-mode]] behaves. You don't need to pay
+# attention to them.  The todos you're probably looking for are
+# [[fileStart][down a ways]], below the line of "-"'s (dashes).  If
+# you're interested in how org-mode is customized, please read on and
+# take a look at [[glossary:org-mode][sprout's org-mode setup]].
+#
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# These options set [[glossary:metadata][metadata]] for org-mode, and
+# will be used if/when the file gets [[glossary:render][rendered]]
+# into another format (like HTML).
+#
+#+TITLE: cabbage tasks
+#+AUTHOR: maintained by aresnick of http://alecresnick.org 
+#+EMAIL: alec@sproutward.org
+#+DATE: Last modified 02.07.09
+#+LANGUAGE: en
+#
+#
+# ---
+#
+#
+# The CATEGORY and FILETAGS variables define the CATEGORY and default
+# TAGS for the file.  The CATEGORY is used in the
+# [[glossary:org-agenda][agenda]] and the tags let you
+# [[glossary:tag][tag]] headlines.
+# 
+#+CATEGORY: cabbage 
+#+FILETAGS: sprout cabbage_todo.org cabbage
+#
+#
+# ---
+#
+#
+# LINK options are used to [[glossary:abbreviated org-mode
+# links][abbreviate org-mode links]] for easy linking within a
+# document.  The "%s" string tells a link to substitute whatever
+# [[glossary:tag][tag]] we choose in place of %s, letting us do things
+# like [[glossary:glossary][link terms in our glossary]].
+#
+#+LINK: glossary http://glossary.sproutward.org/%s
+#
+#
+# ---
+#
+#
+# The STARTUP options control how org-mode looks and act by setting
+# preferences at startup.  We are using the following preferences:
+#
+# - "showall" starts org-mode with all the headlines
+# [[glossary:org-mode visibility cycling][expanded].
+# - "logdone" sets org-mode to record the time and date when a TODO is
+# completed.
+# - "lognotedone" sets org-mode to ask for a [[glossary:org-mode notes][note]] when a TODO is
+# done.
+# - "logrepeat" sets org-mode to record when a TODO which
+# [[glossary:org-mode repeating tasks][repeats]] is completed.
+# - "lognoteclock-out" sets org-mode to ask for a [[glossary:org-mode notes][note]] when you
+# [[glossary:time tracking][clock out]] of a task.
+# - "hidestars" hides all but the last star in a headline, to
+# [[][enhance readability]].
+# - "odd" sets org-mode to only use odd numbers of stars in headlines,
+# to [[][enhance readability].
+#
+#+STARTUP: showall logdone lognotedone logrepeat lognoteclock-out hidestars odd 
+#
+#
+# ---
+#
+#
+# At sprout, we try to keep track of how much time we expect things to
+# take, and then how much they actually do.  These configuration lines
+# let us set up a way to attach a [[glossary:org-mode
+# property]["property]] to a TODO where we can set our time estimate,
+# and then record how long the task actually took by
+# [[glossary:time-tracking][clocking in and out]].  The "Effort_ALL"
+# PROPERTY sets the available time increments.  The "COLUMNS" property
+# defines columns for [[glossary:emacs column-mode][column-mode]].  In
+# this case, those columns are the task, the estimated time, and the
+# total time clocked (CLOCKSUM).  The "%#" parts of the line indicate
+# how many characters wide each column should be (%70 = 70 characters
+# wide, for instance.)
+#
+#+PROPERTY: Effort_ALL 0:00 0:05 0:15 0:30 0:45 1:00 1:15 1:30 1:45 2:00 2:15 2:30 2:45 3:00 3:15 3:30 3:45 4:00 4:15 4:30 4:45 5:00 5:15 5:30 5:45 6:00
+#+COLUMNS: %70ITEM(Task) %10Effort(Estimated Effort){:} %CLOCKSUM
+#
+# ~~~
+# ------------------------------------------------------------
+#
+#+BEGIN_COMMENT
+# <<fileDescription>>
+This todo.org file is for recording tasks associated with the
+${projectname} project.  Take a look at the [[][sprout doshit
+guidelines]] for the details and the [[][sprout doshit tutorial]] for
+more information on doing shit with doshit.
+
+A quick summary of the guidelines:
+ - No scheduled task should be expected to take more than six hours.
+   If you don't know how long a task will take, create a TODO for
+   figuring that out.
+ - No scheduled task should be unassigned.  If you don't know who will
+   do it, create a task for figuring that out and make someone
+   responsible for following up.
+ - No task should go without a deadline if it can be avoided.  If it
+   is not clear when the deadline should be, do not set it
+   arbitrarily.  Create another TODO for assessing how long the given
+   task(s) will take and set a deadline on that.
+ - Each TODO should be assigned to exactly one person.  If you want
+   several people to do a task, copy and paste that task and tag each
+   instance with their name.
+ - Estimate how long a task will take, and be sure to track the time
+   you spend on it, commenting as to what progress you made each time
+   you clock in and out.  See [[][time tracking in doshit at sprout]]
+ - The only person setting the priority of a task should be the person
+   who is doing it.
+
+If you're having any issues with doshit, drop [[mailto:doshit@sproutward.org][doshit@sproutward.org]] a
+line, or drop by [[irc:/sprout/irc.freenode.net][#sprout]] on IRC.
+#+END_COMMENT
+
+
+# File starts below the line of "#"s.  Refer to [[glossary:org-mode
+# customization][the doshit documentation]] for information about how
+# to edit the options above.
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# <<fileStart>>
+
+
+# Start recording TODOs after this line
+# ------------------------------------------------------------
+#
