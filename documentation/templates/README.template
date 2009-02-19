@@ -1,0 +1,38 @@
+<%def name='header'>
+#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#
+# ${projectname}  
+
+## what is this?
+This is the README file for the ${projectName} project.  It contains information about the project, including an overview of the project, an index and explanation of all the files associated with the project, and the info you need to get involved or ask questions.
+
+## overview
+### what is ${project_name}?
+
+### who's involved?
+
+### why are you doing it?
+
+### who is the contact person?
+
+### and what the heck are all these files?
+ 
+
+sprout uses the [mako templating system](http://www.makotemplates.org/docs/) to generate its documents.  Anything appearing as ${} is a mako variable.  Refer to the [mako documentation](http://www.makotemplates.org/docs/) and our description of how we use [mako at sprout]() for more details.
+
+If this README is malformed or unhelpful, please let us know at sprout@sproutward.org
+
+#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#
+</%def>
+
+<%def name='auto_dictionary'>
+{ 'time' : asctime() }
+</%def>
+
+<%def name='prompt_dictionary'>
+</%def>
+
+<%def name='default_entry'>
+</%def>
+
+
+

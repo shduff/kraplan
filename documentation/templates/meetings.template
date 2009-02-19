@@ -1,0 +1,71 @@
+<%def name='header'>
+~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~
+# ${projectname} 
+
+- contact person :: The person who records the notes for a meeting is
+  the contact person for issues related to the content of that
+  meeting. All this means is that if someone who wasn't at the meeting
+  has questions, they'll ask you.
+
+- in attendance :: This is a record of anyone who is attending the
+  meeting. This information allows us to keep a record of who was
+  involved with which projects and when.
+
+- agenda :: Meetings shouldn't be called without an agenda being set
+beforehand, even if that just means "brainstorm" is on the agenda. Use
+the agenda to define the scope of the meeting. When the things on your
+agenda are done, your meeting can be done too.
+
+- deliverables :: These are the things that explicitly want to get
+  done, decided on, or delegated during the meeting. They are like a
+  local todo list.
+
+- preparation :: This is a place for people to share the notes,
+  research, and brainstorming that they do before a meeting. 
+
+- notes :: These are the the meetings notes!
+
+- other notes :: This is intended to hold any notes or minutes kept by
+others at the meeting.  Please link or paste them in as soon as
+possible after the meeting ends, with the name of the note-taker as
+a subheading.
+
+- follow-up :: the ideas or TODOs that need to be followed up on
+after the meeting.  If it makes sense, assign a deadline and tag
+the TODO with the appropriate person.
+
+~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~
+</%def>
+
+
+<%def name='auto_dictionary'>
+{ 'date' : asctime() }
+</%def>
+
+
+<%def name='prompt_dictionary'>
+{ 'name' : 'What is your name? ',
+  'topic' : 'What is subject of this meeting? This will be the title for your meeting entry. " }
+</%def>
+
+
+<%def name='default_entry'>
+# ${topic}, ${date}
+##contact person: ${name}
+
+## in attendance ::
+
+## agenda ::
+
+## deliverables :: 
+
+## preparation ::
+
+## notes ::
+
+## other notes ::
+
+## follow-up ::
+
+</%def>
+

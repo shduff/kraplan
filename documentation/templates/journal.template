@@ -1,0 +1,38 @@
+<%def name='header'>
+#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#
+
+The journal is intended to record the "informal" notes, thoughts, and
+research associated with a project. This means, anything you come up
+with on your own and want to share should get written here. Everyone
+involved in the project should feel free to write in the journal,
+separating their work from others with tagged headlines. Take a look
+at [journal guidelines]() for a more detailed look at the journal.
+
+A quick summary of the guidelines:
+
+ - Create a separate headline marked with the topic, date, and your
+   name for each section you write in the journal. (This will happen
+   automatically if you add to the journal file using the
+   seed_template script.)
+
+ - Link to and share any outside materials or resources relevant to
+   the entry you are making.
+
+#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#
+</%def>
+
+<%def name='auto_dictionary'>
+{ 'time' : asctime() }
+</%def>
+
+<%def name='prompt_dictionary'>
+{ 'name' : 'What is your name? ',
+  'topic' : 'What are you writing about? This will be the title of your journal entry. ' }
+</%def>
+
+<%def name='default_entry'>
+-----------------------------------------------------
+# ${topic}, ${name}, ${date}
+
+
+</%def>

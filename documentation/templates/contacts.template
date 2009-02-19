@@ -1,0 +1,72 @@
+<%def name='header'> 
+#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~# 
+This is the contacts.org file for the {$projectName} project.  It is
+intended to record all the people who are connected to or affiliated
+with the project, including those people whom the project-doers meet
+with, correspond with, etc.
+
+Take a look at the [pollen guidelines]() for more details about how the contact system works.
+
+- Try to record as much contact information as possible for each
+   contact.
+
+- Include a description of the person's background, and a running
+   collection of observations about the person's interests,
+   priorities, values, etc.  The point of this is to encourage us to
+   pay attention to what other people need so that we can pass along
+   relevant connections or information--this is one of the strongest
+   ways to build and maintain connections.  Link abundantly.
+
+- Link or reference any meeting notes or decisions made that involve
+   this person or things in which they have an interest.
+
+- Record any standing todo's or followups that need to be addressed
+   for the person in the follow-up section.
+
+- When mentioning email or correspondence, be sure to provide a link
+   to the appropriate thread online.
+
+#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#
+
+</%def>
+
+
+<%def name='auto_dictionary'>
+{ 'date' : asctime() }
+</%def>
+
+
+<%def name='prompt_dictionary'>
+{ 'contact' : 'Who did you meet? ', 
+  'connection' : 'What is your connection with this person?' }
+</%def>
+
+
+<%def name='default_entry'>
+
+---------------------------------------
+
+# contact name: ${contact}
+## ${connection}
+
+### organization:
+
+### phone number:
+- cell:
+- home:
+- work: 
+
+### email: 
+
+### website(s):
+
+### mailing address:
+
+### last contact:
+- ${date}
+
+### next_steps:
+ 
+
+</%def>
+
